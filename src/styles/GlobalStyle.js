@@ -7,15 +7,15 @@ const GlobalStyle = createGlobalStyle`
   ${Fonts};
 
   :root {
-    --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
-    --navy-shadow: rgba(2, 12, 27, 0.7);
-    --slate: #8892b0;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
-    --white: #e6f1ff;
+    --dark-navy: #172A3A;
+    --navy: #335C81;
+    --light-navy: #4073A0;
+    --lightest-navy: #508AB9;
+    --navy-shadow: rgba(9, 6, 12, 0.7);
+    --slate: #fff;
+    --light-slate: #fff;
+    --lightest-slate: #fff;
+    --white: #fff;
     --green: #64ffda;
     --green-tint: rgba(100, 255, 218, 0.1);
 
