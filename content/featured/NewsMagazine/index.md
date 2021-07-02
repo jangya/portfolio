@@ -1,5 +1,5 @@
 ---
-date: '3'
+date: '2'
 title: 'NewsMagazine'
 cover: './newsmag.png'
 github: 'https://github.com/jangya/news-mag'

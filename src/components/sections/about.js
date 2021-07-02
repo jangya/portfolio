@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
+import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -114,21 +114,14 @@ const StyledPic = styled.div`
 `;
 
 const About = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500, traceSVG: { color: "#64ffda" }) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-    }
-  `);
-
   const revealContainer = useRef(null);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
@@ -148,19 +141,23 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Jangya(ja-gyàn), a software engineer based in Bangalore, India.</p>
+            <p>
+              Hello! I'm Jangya, a software engineer based in Bangalore, India. My professional
+              experience include 7 years of experience in web related technologies like JavaScript,
+              PHP and C#.
+            </p>
 
             <p>
-              I enjoy creating things that live on the internet, whether that be websites,
-              applications, or anything in between. My goal is to always build products that provide
-              pixel-perfect, performant experiences.
+              My interest in web development started back in 2012 when I decided to try editing some
+              HTML pages — turns out hacking and downloading a custom pdf file out of the HTML page
+              taught me a lot about HTML &amp; CSS!
             </p>
 
             <p>
               Shortly after graduating from{' '}
               <a href="https://www.ccis.northeastern.edu">Biju patnaik univerisity of University</a>
               , I joined the engineering team at{' '}
-              <a href="https://www.upstatement.com">SummationIT</a> where I work on a wide variety
+              <a href="https://www.summationit.com">SummationIT</a> where I work on a wide variety
               of interesting and meaningful projects on a daily basis.
             </p>
 
@@ -174,7 +171,14 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <Img fluid={data.avatar.childImageSharp.fluid} alt="Avatar" className="img" />
+            <StaticImage
+              className="img"
+              src="../../images/me.jpg"
+              width={500}
+              quality={95}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt="Headshot"
+            />
           </div>
         </StyledPic>
       </div>

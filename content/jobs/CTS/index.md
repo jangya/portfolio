@@ -7,6 +7,5 @@ range: 'May 2016 - July 2018'
 url: 'https://cognizant.com/'
 ---
 
-- Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery
-- Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness
-- Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more
+- Developed and shipped highly interactive web applications for Apple using React framework
+- Accountable for bug fixing, unit testing, UX standardization, performance and accessibility across all web apps

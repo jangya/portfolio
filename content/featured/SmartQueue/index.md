@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '3'
 title: 'Smart Queue'
 cover: './smart-queue.png'
 github: 'https://github.com/jangya/smart-queue'

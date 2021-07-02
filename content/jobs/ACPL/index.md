@@ -7,6 +7,5 @@ range: 'Dec 2013 - May 2016'
 url: 'https://summationIT.com/'
 ---
 
-- Write modern, performant, maintainable code for a diverse array of client and internal projects
-- Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify
-- Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis
+- Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, jQuery and PHP
+- Tested sites in various browsers and devices to ensure cross-browser compatibility and mobile responsiveness
