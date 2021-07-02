@@ -3,7 +3,9 @@
 
 name: Node.js CI
 
-on: workflow-dispatch
+on:
+  push:
+    branch: [ main ]
 
 jobs:
   build:
