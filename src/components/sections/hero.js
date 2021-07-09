@@ -63,7 +63,7 @@ const Hero = () => {
   const four = (
     <p>
       I enjoy creating things that live on the internet. Passionate about building interactive &amp;
-      rich user interfaces, specializing in web development with latest technologies.
+      rich user interfaces, specialize in web development using latest technologies.
     </p>
   );
   const five = (

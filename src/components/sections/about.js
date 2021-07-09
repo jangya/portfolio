@@ -144,7 +144,7 @@ const About = () => {
             <p>
               Hello! I'm Jangya, a software engineer based in Bangalore, India. My professional
               experience include 7 years of experience in web related technologies like JavaScript,
-              PHP and C#.
+              PHP and C#. Deployed multiple application into heroku and firebse.
             </p>
 
             <p>
