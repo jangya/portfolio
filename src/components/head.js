@@ -18,7 +18,7 @@ const Head = ({ title, description, image }) => {
             defaultDescription: description
             siteUrl
             defaultImage: image
-            twitterUsername
+            linkedIn
           }
         }
       }

@@ -7,6 +7,7 @@ module.exports = {
       'Jangya satapathy is a software engineer who specializes in building exceptional digital experiences.',
     siteUrl: 'https://jangya.github.io', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
+    linkedIn: 'https://www.linkedin.com/in/jangya',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
