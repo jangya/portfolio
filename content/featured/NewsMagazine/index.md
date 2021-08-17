@@ -5,10 +5,10 @@ cover: './newsmag.png'
 github: 'https://github.com/jangya/news-mag'
 external: 'https://news-mag.herokuapp.com/'
 tech:
-  - React.js
-  - Node.js
+  - React
+  - Material UI
   - Newsorg API
 showInProjects: true
 ---
 
-News Magazine is a fullstack web application, which get the top headlines from UK. Much more to come stay tuned.
+News Magazine is a news web application which fetch the top headlines country wise. Currently it fetch from UK, much more to come stay tuned.

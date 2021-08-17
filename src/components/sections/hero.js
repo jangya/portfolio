@@ -62,8 +62,9 @@ const Hero = () => {
   const three = <h3 className="big-heading">I Code Deliver Repeat.</h3>;
   const four = (
     <p>
-      I enjoy creating things that live on the internet. Passionate about building interactive &amp;
-      rich user interfaces, specialize in web development using latest technologies.
+      I enjoy creating things that live on the internet. Passionate about building user experience
+      &amp; interfaces. Expertise in web development using{' '}
+      <b>Angular, React, Node.js, Express &amp; MongoDB</b>.
     </p>
   );
   const five = (

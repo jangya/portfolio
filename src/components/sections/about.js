@@ -132,6 +132,10 @@ const About = () => {
     'Angular(Js)',
     'Node.js',
     'jQuery',
+    'Bootstrap',
+    'MongoDB',
+    'MySQL',
+    'PHP',
   ];
 
   return (
@@ -143,8 +147,8 @@ const About = () => {
           <div>
             <p>
               Hello! I'm Jangya, a software engineer based in Bangalore, India. My professional
-              experience include 7 years of experience in web related technologies like JavaScript,
-              PHP and C#. Deployed multiple application into heroku and firebse.
+              skills includes 7 years of experience in building high quality frontend and backend of
+              many web projects. Deployed multiple application into heroku and firebse.
             </p>
 
             <p>
@@ -155,10 +159,9 @@ const About = () => {
 
             <p>
               Shortly after graduating from{' '}
-              <a href="https://www.ccis.northeastern.edu">Biju patnaik univerisity of University</a>
-              , I joined the engineering team at{' '}
-              <a href="https://www.summationit.com">SummationIT</a> where I work on a wide variety
-              of interesting and meaningful projects on a daily basis.
+              <a href="https://www.bput.ac.in/">Biju patnaik univerisity of University</a>, I joined
+              the corporate world, where I work on a wide variety of interesting and meaningful
+              projects on a daily basis.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>

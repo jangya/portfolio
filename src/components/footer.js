@@ -83,7 +83,7 @@ const Footer = () => (
     </StyledSocialLinks>
 
     <StyledCredit tabindex="-1">
-      Thanks to
+      Inspired by
       <a href="https://github.com/bchiang7/v4">
         <div>Brittany Chiang</div>
       </a>
