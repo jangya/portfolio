@@ -1,8 +1,7 @@
 ---
 date: '2018-12-01'
 title: 'Home OS'
-github: ''
-external: ''
+external: './home_os.pdf'
 tech:
   - Flutter
   - Dart
@@ -12,4 +11,4 @@ android: ''
 company: Startup
 ---
 
-A home automation mobile app using flutter
+A home automation mockup mobile app made with flutter. This project is not published yet, find out the screenshots in the external link.

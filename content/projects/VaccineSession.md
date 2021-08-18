@@ -12,4 +12,4 @@ company: Learning
 showInProjects: true
 ---
 
-Simple vaccine center finder web app made with angular.js using CO-WIN APIs
+Find vaccine center near you, a simple web app made with angular.js and CO-WIN public APIs.

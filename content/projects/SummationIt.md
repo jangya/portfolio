@@ -1,7 +1,6 @@
 ---
 date: '2015-11-16'
 title: 'Summation IT'
-github: ''
 external: 'http://summationit.com/'
 tech:
   - PHP

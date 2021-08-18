@@ -2,7 +2,7 @@
 date: '2021-05-16'
 title: 'DisBook'
 github: 'https://github.com/jangya/disbook'
-external: 'https://dis-book.herokuapp.com'
+external: 'https://dis-books.herokuapp.com'
 tech:
   - React
   - Redux
@@ -11,4 +11,4 @@ company: Learning
 showInProjects: true
 ---
 
-Simple Book library crud application using redux, react and node.js
+A Book library crud application made with redux, react and node.js. This project was developed for learning purpose.

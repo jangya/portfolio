@@ -3,7 +3,7 @@ date: '2'
 title: 'NewsMagazine'
 cover: './newsmag.png'
 github: 'https://github.com/jangya/news-mag'
-external: 'https://news-mag.herokuapp.com/'
+external: 'https://news-org.herokuapp.com'
 tech:
   - React
   - Material UI

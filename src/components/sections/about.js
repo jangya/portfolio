@@ -6,7 +6,7 @@ import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
-  max-width: 900px;
+  max-width: 910px;
 
   .inner {
     display: grid;
@@ -22,6 +22,7 @@ const StyledText = styled.div`
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-gap: 0 10px;
     padding: 0;
     margin: 20px 0 0 0;
     overflow: hidden;
@@ -148,7 +149,8 @@ const About = () => {
             <p>
               Hello! I'm Jangya, a software engineer based in Bangalore, India. My professional
               skills includes 7 years of experience in building high quality frontend and backend of
-              many web projects. Deployed multiple application into heroku and firebse.
+              many web projects. Deployed multiple application into docker container, heroku &amp;
+              firebse.
             </p>
 
             <p>
