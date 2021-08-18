@@ -11,4 +11,4 @@ tech:
 showInProjects: true
 ---
 
-A command based GitHub app built with Probot for upgrading both private and public node.js dependencies transitively by creating pull requests in your repositories.
+A command-based GitHub app built with Probot helps in upgrading private and public npm dependencies transitively by creating pull requests in your repositories.

@@ -8,4 +8,4 @@ company: Cognizant
 showInProjects: true
 ---
 
-A web app helps in tracking user's time inside ODC, it collects data from punching devices via API and present in grid table. This app also triggers mail daily basis to each user.
+Track and adjust your number of hours spend inside ODC. The UI offers a grid table page along with a dashboard and server collects data from punching devices and triggers mail every day.

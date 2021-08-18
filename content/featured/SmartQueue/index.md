@@ -11,4 +11,4 @@ tech:
 showInProjects: true
 ---
 
-A server less web app built with Angular and Firebase for avoiding physical queue in hospitals during covid pandemic, also allows doctors to track their patient information.
+A token based patient tracking app for avoiding physical queue in hospitals, developed during covid pandemic.

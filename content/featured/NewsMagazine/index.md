@@ -11,4 +11,4 @@ tech:
 showInProjects: true
 ---
 
-News Magazine is a news web application which fetch the top headlines country wise. Currently it fetch from UK, much more to come stay tuned.
+A news web application shows top headlines from a set of categories and countries, offers a search page as well.
