@@ -1,7 +1,7 @@
 ---
 date: '2016-03-01'
-title: 'Cosy Tech'
-github: 'https://github.com/jangya/cosytech'
+title: 'SpyTrac'
+github: 'https://github.com/jangya/spytrac'
 tech:
   - jQuery
   - Bootstrap
