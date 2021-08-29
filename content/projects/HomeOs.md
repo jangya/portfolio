@@ -11,4 +11,4 @@ android: ''
 company: Startup
 ---
 
-A home automation mockup mobile app made with flutter. This project is not published yet, find out the screenshots in the external link.
+A home automation mobile app made with flutter. This project is not published yet, find out the screenshots in the external link.
