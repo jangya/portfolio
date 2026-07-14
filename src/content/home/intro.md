@@ -6,4 +6,4 @@ My center of gravity is front-end architecture: the place where product judgment
 
 Now I am pursuing an **M.Tech in AI/ML at BITS Pilani** so I can understand where AI and front-end architecture actually intersect, not where the hype says they do. My belief is simple: if you cannot build it, you cannot truly debug it.
 
-<a class="text-link" href="/insights/from-snake-game-to-ai-native-front-end-architecture">Read the full story →</a>
+<a class="text-link" href="./insights/from-snake-game-to-ai-native-front-end-architecture/index.html">Read the full story →</a>

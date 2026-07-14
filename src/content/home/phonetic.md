@@ -1,7 +1,7 @@
 ---
 title: "ଯଜ୍ଞ"
 soundLabel: "/ jəg · yän  /"
-sound: "/phonetic.m4a"
+sound: "./phonetic.m4a"
 triggerLabel: "sounds like jug-yan →"
 ---
 

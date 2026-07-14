@@ -5,6 +5,11 @@ import profile from "../content/personal-info/profile.json";
 const { title, activePage } = Astro.props;
 const year = new Date().getFullYear();
 const googleAnalyticsId = "G-3CG3K6B06G";
+const pageDepth = Astro.url.pathname.split("/").filter(Boolean).length;
+const rootPath = pageDepth === 0 ? "./" : "../".repeat(pageDepth);
+const homePath = `${rootPath}index.html`;
+const projectsPath = `${rootPath}projects/index.html`;
+const insightsPath = `${rootPath}insights/index.html`;
 ---
 
 <html lang="en">
@@ -24,17 +29,17 @@ const googleAnalyticsId = "G-3CG3K6B06G";
     <link
       rel="icon"
       type="image/png"
-      href="/favicon/favicon-96x96.png"
+      href={`${rootPath}favicon/favicon-96x96.png`}
       sizes="96x96"
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href={`${rootPath}favicon/favicon.svg`} />
+    <link rel="shortcut icon" href={`${rootPath}favicon/favicon.ico`} />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
+      href={`${rootPath}favicon/apple-touch-icon.png`}
     />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="manifest" href={`${rootPath}favicon/site.webmanifest`} />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <script
@@ -55,23 +60,23 @@ const googleAnalyticsId = "G-3CG3K6B06G";
       <nav>
         <div class="site-identity">
           <a
-            href="/"
+            href={homePath}
             class="site-avatar-link"
             aria-label={`${profile.name} home`}
           >
-            <img class="site-avatar" src="/profile.png" alt="" />
+            <img class="site-avatar" src={`${rootPath}profile.png`} alt="" />
           </a>
           <div class="site-text">
-            <a href="/" class="site-name">{profile.name}</a>
+            <a href={homePath} class="site-name">{profile.name}</a>
             <p class="name-phonetic-trigger">{profile.status}</p>
           </div>
         </div>
         <div class="nav-links">
-          <a href="/" class={activePage === "home" ? "active" : ""}>Home</a>
-          <a href="/projects" class={activePage === "projects" ? "active" : ""}
+          <a href={homePath} class={activePage === "home" ? "active" : ""}>Home</a>
+          <a href={projectsPath} class={activePage === "projects" ? "active" : ""}
             >Projects</a
           >
-          <a href="/insights" class={activePage === "insights" ? "active" : ""}
+          <a href={insightsPath} class={activePage === "insights" ? "active" : ""}
             >Insights</a
           >
           <a

@@ -8,7 +8,7 @@ import NamePhonetic, {
 
 const namePhonetic = importedNamePhonetic ?? {
   title: "jug-yan",
-  sound: "/phonetic.m4a",
+  sound: "./phonetic.m4a",
   soundLabel: "jug-yan",
   triggerLabel: profile.namePhonetic,
 };
@@ -107,7 +107,7 @@ const namePhonetic = importedNamePhonetic ?? {
       return;
     }
 
-    currentAudio = new Audio("/phonetic.m4a");
+    currentAudio = new Audio("./phonetic.m4a");
 
     currentAudio.play().catch(() => {
       // browser blocked autoplay or file missing
