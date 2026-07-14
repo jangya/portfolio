@@ -1,28 +1,19 @@
-name: Deploy to GitHub Pages
+name: Push to jangya.github.io
 
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+on: workflow_dispatch
 
 jobs:
-  build-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: "npm"
 
       - name: Install dependencies
         run: npm install
@@ -30,9 +21,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Push to jangya.github.io
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          cname: jangya.github.io
+          source-directory: "dist"
+          destination-github-username: "jangya"
+          destination-repository-name: "jangya.github.io"
+          user-email: jangya069@gmail.com
+          target-branch: main
