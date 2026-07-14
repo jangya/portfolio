@@ -1,0 +1,51 @@
+---
+import Base from "../layouts/Base.astro";
+import profile from "../content/personal-info/profile.json";
+
+const badgeClass = (status: string) => {
+  if (status === "Active") return "badge badge-active";
+  if (status === "In Progress") return "badge badge-progress";
+  return "badge badge-exploring";
+};
+
+const badgeLabel = (status: string) => {
+  if (status === "Active") return "[Active]";
+  if (status === "In Progress") return "[In Progress]";
+  return "[Exploring]";
+};
+
+const stripHtml = (str: string) => str.replace(/<[^>]*>/g, "");
+---
+
+<Base title="Projects" activePage="projects">
+  <h1>Projects</h1>
+  <p class="muted" style="margin-top: 0.5rem; margin-bottom: 0;">
+    Things I'm building — side projects, experiments, and tools.
+  </p>
+
+  <h2>Selected Work</h2>
+
+  {
+    profile.projects.map((project) => (
+      <div class="project">
+        <div class="project-title">
+          {project.url ? (
+            <a href={project.url} target="_blank" rel="noopener noreferrer">
+              {project.title}
+            </a>
+          ) : (
+            project.title
+          )}
+        </div>
+        <div class="project-sub">{project.subtitle}</div>
+        <p class="project-desc">{stripHtml(project.description)}</p>
+        <div class="project-footer">
+          <span class={badgeClass(project.status)}>
+            {badgeLabel(project.status)}
+          </span>
+          <span class="tags">{project.tags.join(" · ")}</span>
+        </div>
+      </div>
+    ))
+  }
+</Base>

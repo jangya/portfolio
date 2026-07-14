@@ -1,0 +1,65 @@
+---
+import Base from "../layouts/Base.astro";
+
+const writingTracks = [
+  "Open Engineering",
+  "Front-end Craft",
+  "Building in Public",
+];
+const insightModules = import.meta.glob("../content/insights/*.md", {
+  eager: true,
+});
+type InsightFrontmatter = {
+  title: string;
+  date: string;
+  category: string;
+  description: string;
+};
+
+const insights = Object.entries(insightModules)
+  .map(([path, entry]) => {
+    const insightEntry = entry as { frontmatter: InsightFrontmatter };
+
+    return {
+      slug: path.split("/").pop()?.replace(".md", ""),
+      ...insightEntry.frontmatter,
+    };
+  })
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+const formatDate = (date: string) =>
+  new Date(`${date}T00:00:00`).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+---
+
+<Base title="Insights" activePage="insights">
+  <h1>Insights</h1>
+  <p class="muted" style="margin-top: 0.5rem; margin-bottom: 0;">
+    Opinions on engineering, frontend craft, and building in public.
+  </p>
+
+  <h2>Writing</h2>
+
+  {
+    insights.map((insight) => (
+      <div class="insight">
+        <p class="post-date">
+          {formatDate(insight.date)} &nbsp;·&nbsp; {insight.category}
+        </p>
+        <h3>
+          <a href={`/insights/${insight.slug}`}>{insight.title}</a>
+        </h3>
+        <p class="insight-excerpt">{insight.description}</p>
+      </div>
+    ))
+  }
+
+  <h2>Drafting</h2>
+
+  <p class="insight-excerpt">
+    More notes are being shaped across {writingTracks.join(" · ")}.
+  </p>
+</Base>

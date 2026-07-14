@@ -1,0 +1,168 @@
+{
+  "name": "Jangya Satapathy",
+  "namePhonetic": "sounds like jug-yan",
+  "nameOrigin": "Sanskrit / Odia · means: knowledge, awareness",
+  "location": "Bengaluru, India",
+  "email": "jangya.satapathy@gmail.com",
+  "phone": "9611010508",
+  "portfolio": "jangya.github.io",
+  "linkedin": "https://www.linkedin.com/in/jangya",
+  "github": "https://github.com/jangya",
+  "status": "Staff Software Engineer",
+  "currentRole": "Staff Frontend Engineer",
+  "currentCompany": "Edelman Financial Engines",
+  "pillars": ["Fitness & Mobility", "Meditation", "Reading", "AI/ML Research"],
+  "stack": {
+    "primary": ["React", "TypeScript", "JavaScript", "Node.js"],
+    "frontend": ["Angular", "Astro", "Tailwind", "Redux", "Mantine", "SCSS"],
+    "emerging": ["GenAI", "LLM Integration", "Python", "ML Pipelines"]
+  },
+  "stats": [
+    { "value": "10+", "label": "Years Frontend" },
+    { "value": "6", "label": "Companies" },
+    { "value": "M.Tech", "label": "AI/ML @ BITS" },
+    { "value": "∞", "label": "Curiosity" }
+  ],
+  "experience": [
+    {
+      "company": "Edelman Financial Engines",
+      "role": "Staff Software Engineer",
+      "period": "Mar 2026 – Present",
+      "location": "Bengaluru",
+      "highlight": "Leading frontend architecture and GenAI integration at scale",
+      "bullets": [
+        "Architecting advisory platform experiences across React, Zustand, and modern frontend patterns.",
+        "Shaping GenAI workflows where strong UI foundations, debugging discipline, and human-in-the-loop design matter."
+      ]
+    },
+    {
+      "company": "Edelman Financial Engines",
+      "role": "Senior Software Engineer",
+      "period": "Oct 2021 – Mar 2026",
+      "location": "Bengaluru",
+      "highlight": "4.5 years shaping product frontend for a financial advisory platform",
+      "bullets": [
+        "Built and evolved client-facing financial advisory interfaces with a focus on reliability and clarity.",
+        "Worked across complex product flows where state, data fetching, and user trust had to stay aligned."
+      ]
+    },
+    {
+      "company": "Oracle",
+      "role": "Senior Member of Technical Staff",
+      "period": "Jun 2021 – Oct 2021",
+      "location": "Bengaluru",
+      "highlight": "Enterprise-grade frontend systems at Oracle Cloud",
+      "bullets": [
+        "Worked on enterprise UI systems for Oracle Cloud using framework-driven frontend architecture.",
+        "Deepened understanding of distributed systems and the boundaries where frontend meets platform services."
+      ]
+    },
+    {
+      "company": "SAP",
+      "role": "Senior Developer",
+      "period": "Apr 2021 – Jun 2021",
+      "location": "Bengaluru",
+      "highlight": "Senior developer track at SAP's Bengaluru engineering hub",
+      "bullets": [
+        "Built enterprise product UI with SAP UI5 and Angular-oriented application patterns.",
+        "Worked around cloud delivery concerns including Node.js services, MongoDB, Docker, and Kubernetes."
+      ]
+    },
+    {
+      "company": "SAP",
+      "role": "Developer",
+      "period": "Jul 2018 – Apr 2021",
+      "location": "Bengaluru",
+      "highlight": "2+ years building SAP product frontend systems",
+      "bullets": [
+        "Built product frontend systems with SAP UI5, Angular, and MEAN-stack concepts.",
+        "Learned how enterprise frameworks abstract recurring product, accessibility, and integration problems."
+      ]
+    },
+    {
+      "company": "Cognizant",
+      "role": "Programmer Analyst",
+      "period": "Jun 2016 – Jul 2018",
+      "location": "Bengaluru",
+      "highlight": "Consulted for Apple and built a stronger foundation in UI quality",
+      "bullets": [
+        "Worked as a consultant for Apple, gaining exposure to accessibility, design discipline, and performance expectations.",
+        "Explored enterprise monoliths and Angular-era application structure while learning how production UI decisions scale."
+      ]
+    },
+    {
+      "company": "Adept Concept Private Limited",
+      "role": "Software Developer",
+      "period": "2014 – 2016",
+      "location": "Bhubaneswar",
+      "highlight": "Early startup experience building web applications from raw fundamentals",
+      "bullets": [
+        "Built web applications with jQuery, PHP, HTML, CSS, and JavaScript.",
+        "Learned browser behavior, DOM manipulation, and server-rendered workflows before modern frontend abstractions hid the details."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.Tech, AI/ML",
+      "institution": "BITS Pilani",
+      "period": "2024 – Present",
+      "note": "WILP — Work Integrated Learning Program, 2nd Semester"
+    },
+    {
+      "degree": "B.Tech, Electronics & Communications",
+      "institution": "Biju Patnaik University of Technology",
+      "period": "2009 – 2013",
+      "note": null
+    }
+  ],
+  "projects": [
+    {
+      "id": "learning-artifacts",
+      "title": "Learning Artifacts",
+      "subtitle": "Interactive Learning Repository",
+      "description": "A growing collection of small UI-based learning artifacts that turn technical concepts, experiments, and study notes into explorable single-page interfaces.",
+      "tags": ["HTML", "Learning Tools", "Interactive Demos", "GitHub Pages"],
+      "status": "Active",
+      "url": "https://github.com/jangya/learning-artifacts"
+    },
+    {
+      "id": "portfolio",
+      "title": "jangya.github.io",
+      "subtitle": "Personal Portfolio",
+      "description": "Luxury Expressive Minimalist portfolio built with Astro 7.x, Plain HTML and JavaScript.",
+      "tags": ["Astro", "HTML", "JavaScript"],
+      "status": "Active",
+      "url": "https://github.com/jangya/jangya.github.io"
+    }
+  ],
+  "insights": [
+    {
+      "date": "2025-06-01",
+      "title": "On Building at the AI Frontier",
+      "body": "The engineers who will matter in 5 years aren't the ones who learned to use AI tools. They're the ones who understand <strong>why those tools work</strong> — and build on top of that understanding. Glass Box started because I kept seeing people use LLMs like black boxes. The moment you understand tokenization, attention, and decoding, you write better prompts."
+    },
+    {
+      "date": "2025-05-12",
+      "title": "On Frontend Architecture",
+      "body": "Most frontend bugs aren't UI bugs. They're state management failures — race conditions, uncoordinated data fetching, cascading invalidations. The <strong>React Query orchestrator pattern</strong> I've been refining solves this at the root: sequential bootstrap with chained <code>enabled</code> gates. One source of truth. No chaos."
+    },
+    {
+      "date": "2025-04-21",
+      "title": "On Personal Branding for Engineers",
+      "body": "Engineers underinvest in signal. You have the receipts — the PRs, the architecture decisions, the bugs nobody else wanted to touch. <strong>Share the thinking, not the jargon.</strong> LinkedIn posts that explain AI concepts to non-technical founders outperform anything written for peer engineers. Warm and human beats corporate and polished. Every time."
+    },
+    {
+      "date": "2025-03-30",
+      "title": "On the jangya. Name",
+      "body": "It's Sanskrit/Odia. It means <strong>knowledge, wisdom, awareness</strong>. Pronounced like <em>jug-ya</em>. Most people get it wrong on the first try. The second try always lands. The name carries more than any bio ever could."
+    }
+  ],
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Insights", "href": "#insights" },
+    { "label": "Contact ↗", "href": "#contact" }
+  ]
+}

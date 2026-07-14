@@ -1,0 +1,127 @@
+---
+import Base from "../layouts/Base.astro";
+import profile from "../content/personal-info/profile.json";
+import Intro from "../content/home/intro.md";
+import NamePhonetic, {
+  frontmatter as importedNamePhonetic,
+} from "../content/home/phonetic.md";
+
+const namePhonetic = importedNamePhonetic ?? {
+  title: "jug-yan",
+  sound: "/phonetic.m4a",
+  soundLabel: "jug-yan",
+  triggerLabel: profile.namePhonetic,
+};
+---
+
+<Base title="Home" activePage="home">
+  <!-- Intro -->
+  <div class="intro">
+    <div class="intro-copy">
+      <h1 class="intro-name">{profile.name}</h1>
+      <div class="intro-bio">
+        <Intro />
+      </div>
+    </div>
+  </div>
+
+  <div id="home-name-phonetic-popover" class="name-phonetic-popover" popover>
+    <button
+      class="modal-close"
+      type="button"
+      popovertarget="home-name-phonetic-popover"
+      popovertargetaction="hide"
+      aria-label="Close"
+    >
+      &times;
+    </button>
+    <p class="modal-title">{namePhonetic.title}</p>
+    <span class="phonetic">
+      {namePhonetic.soundLabel}
+      <button
+        id="play-name-button"
+        class="play-btn"
+        type="button"
+        aria-label="Hear how Jangya is pronounced"
+      >
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <path d="M8 5v14l11-7z"></path>
+        </svg>
+      </button>
+    </span>
+    <NamePhonetic />
+  </div>
+
+  <!-- Experience -->
+  <h2>Experience</h2>
+
+  {
+    profile.experience.map((exp) => (
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-role">{exp.role}</span>
+          <span class="entry-period">{exp.period}</span>
+        </div>
+        <div class="entry-company">
+          {exp.company} &nbsp;·&nbsp; {exp.location}
+        </div>
+        <div class="entry-highlight">{exp.highlight}</div>
+        {exp.bullets && (
+          <ul class="entry-bullets">
+            {exp.bullets.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ))
+  }
+
+  <!-- Education -->
+  <h2>Education</h2>
+
+  {
+    profile.education.map((edu) => (
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-role">{edu.degree}</span>
+          <span class="entry-period">{edu.period}</span>
+        </div>
+        <div class="entry-company">{edu.institution}</div>
+        {edu.note && <div class="entry-highlight">{edu.note}</div>}
+      </div>
+    ))
+  }
+</Base>
+<script>
+  let currentAudio: HTMLAudioElement | null = null;
+  const playNameButton = document.getElementById("play-name-button");
+
+  function playName() {
+    // stop and reset if already playing
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+      playNameButton?.classList.remove("playing");
+      currentAudio = null;
+      return;
+    }
+
+    currentAudio = new Audio("/phonetic.m4a");
+
+    currentAudio.play().catch(() => {
+      // browser blocked autoplay or file missing
+      playNameButton?.classList.remove("playing");
+      currentAudio = null;
+    });
+
+    playNameButton?.classList.add("playing");
+
+    currentAudio.addEventListener("ended", () => {
+      playNameButton?.classList.remove("playing");
+      currentAudio = null;
+    });
+  }
+
+  playNameButton?.addEventListener("click", playName);
+</script>
