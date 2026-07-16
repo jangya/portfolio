@@ -1,8 +1,8 @@
 ---
 title: "ଯଜ୍ଞ"
-soundLabel: "/ jəg · yän  /"
+soundLabel: "/ jang · gya  /"
 sound: "./phonetic.m4a"
-triggerLabel: "sounds like jug-yan →"
+triggerLabel: "sounds like jang · gya →"
 ---
 
 It is a Sanskrit word: **यज्ञ (Yagya)**. One of the oldest words in the Vedic tradition.
