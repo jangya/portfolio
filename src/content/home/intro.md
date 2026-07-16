@@ -1,4 +1,4 @@
-Hello! I am Jangya (sounds like <button class="inline-popover-link" type="button" popovertarget="home-name-phonetic-popover">jug-yan</button>).
+Hello! I am Jangya.
 
 I build front-end systems that are fast, accessible, and honest about what they are doing. Over the last decade, that work has taken me from startup web apps built with jQuery and PHP to Apple consulting work at Cognizant, **SAP UI5**, **Angular**, **MEAN** stack systems, Oracle Cloud UI, **Microservices** and now **React**, **Zustand**, and GenAI-integrated advisory platforms at Edelman Financial Engines.
 
