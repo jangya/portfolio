@@ -1,5 +1,5 @@
 ---
-title: "From Snake Game to AI-native Front-end Architecture"
+title: "From jQuery to GenAI: What Front-end Taught Me"
 description: "A personal story about curiosity, abstraction, frontend foundations, AI/ML, and why the interface remains the most durable part of software."
 date: "2026-07-13"
 category: "Open Engineering"

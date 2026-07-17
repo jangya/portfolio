@@ -8,7 +8,7 @@
   "portfolio": "jangya.github.io",
   "linkedin": "https://www.linkedin.com/in/jangya",
   "github": "https://github.com/jangya",
-  "legacyPortfolio": "https://github.com/jangya/portfolio-archieve",
+  "x": "https://x.com/JangyaSatapathy",
   "status": "Staff Software Engineer",
   "currentRole": "Staff Frontend Engineer",
   "currentCompany": "Edelman Financial Engines",
@@ -135,6 +135,15 @@
       "tags": ["Astro", "HTML", "JavaScript"],
       "status": "Active",
       "url": "https://github.com/jangya/jangya.github.io"
+    },
+    {
+      "id": "astro-potflio-forge",
+      "title": "astro-potflio-forge",
+      "subtitle": "Astro Portfolio Template",
+      "description": "A lightweight Astro portfolio forge for shaping fast, content-driven personal sites with a minimal static-first setup.",
+      "tags": ["Astro", "Portfolio", "Static Site"],
+      "status": "Active",
+      "url": "https://github.com/jangya/astro-potflio-forge"
     }
   ],
   "insights": [

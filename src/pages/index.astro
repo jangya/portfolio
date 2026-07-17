@@ -2,16 +2,6 @@
 import Base from "../layouts/Base.astro";
 import profile from "../content/personal-info/profile.json";
 import Intro from "../content/home/intro.md";
-import NamePhonetic, {
-  frontmatter as importedNamePhonetic,
-} from "../content/home/phonetic.md";
-
-const namePhonetic = importedNamePhonetic ?? {
-  title: "jug-yan",
-  sound: "./phonetic.m4a",
-  soundLabel: "jug-yan",
-  triggerLabel: profile.namePhonetic,
-};
 ---
 
 <Base title="Home" activePage="home">
@@ -23,33 +13,6 @@ const namePhonetic = importedNamePhonetic ?? {
         <Intro />
       </div>
     </div>
-  </div>
-
-  <div id="home-name-phonetic-popover" class="name-phonetic-popover" popover>
-    <button
-      class="modal-close"
-      type="button"
-      popovertarget="home-name-phonetic-popover"
-      popovertargetaction="hide"
-      aria-label="Close"
-    >
-      &times;
-    </button>
-    <p class="modal-title">{namePhonetic.title}</p>
-    <span class="phonetic">
-      {namePhonetic.soundLabel}
-      <button
-        id="play-name-button"
-        class="play-btn"
-        type="button"
-        aria-label="Hear how Jangya is pronounced"
-      >
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-          <path d="M8 5v14l11-7z"></path>
-        </svg>
-      </button>
-    </span>
-    <NamePhonetic />
   </div>
 
   <!-- Experience -->
@@ -93,35 +56,3 @@ const namePhonetic = importedNamePhonetic ?? {
     ))
   }
 </Base>
-<script>
-  let currentAudio: HTMLAudioElement | null = null;
-  const playNameButton = document.getElementById("play-name-button");
-
-  function playName() {
-    // stop and reset if already playing
-    if (currentAudio) {
-      currentAudio.pause();
-      currentAudio.currentTime = 0;
-      playNameButton?.classList.remove("playing");
-      currentAudio = null;
-      return;
-    }
-
-    currentAudio = new Audio("./phonetic.m4a");
-
-    currentAudio.play().catch(() => {
-      // browser blocked autoplay or file missing
-      playNameButton?.classList.remove("playing");
-      currentAudio = null;
-    });
-
-    playNameButton?.classList.add("playing");
-
-    currentAudio.addEventListener("ended", () => {
-      playNameButton?.classList.remove("playing");
-      currentAudio = null;
-    });
-  }
-
-  playNameButton?.addEventListener("click", playName);
-</script>
