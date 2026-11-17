@@ -9,7 +9,7 @@ type InsightFrontmatter = {
 };
 
 export async function getStaticPaths() {
-  const insightModules = import.meta.glob("../../content/insights/*.md", {
+  const insightModules = import.meta.glob("../../content/insights/*.{md,mdx}", {
     eager: true,
   });
 
@@ -19,7 +19,10 @@ export async function getStaticPaths() {
       frontmatter: InsightFrontmatter;
     };
 
-    const slug = path.split("/").pop()?.replace(".md", "");
+    const slug = path
+      .split("/")
+      .pop()
+      ?.replace(/\.(md|mdx)$/, "");
 
     return {
       params: { slug },

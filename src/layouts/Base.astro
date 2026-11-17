@@ -10,7 +10,6 @@ const rootPath = pageDepth === 0 ? "./" : "../".repeat(pageDepth);
 const homePath = rootPath;
 const projectsPath = `${rootPath}projects/`;
 const insightsPath = `${rootPath}insights/`;
-const resumePath = `${rootPath}resume.pdf`;
 ---
 
 <html lang="en">
@@ -123,13 +122,6 @@ const resumePath = `${rootPath}resume.pdf`;
           <a
             href={insightsPath}
             class={activePage === "insights" ? "active" : ""}>Insights</a
-          >
-          <a
-            href={resumePath}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open resume"
-            title="Resume">Resume</a
           >
         </div>
       </nav>

@@ -1,0 +1,25 @@
+---
+type CalloutType = "note" | "tip" | "warning";
+
+const {
+  type = "note",
+  title = type[0].toUpperCase() + type.slice(1),
+}: {
+  type?: CalloutType;
+  title?: string;
+} = Astro.props;
+
+const glyphs: Record<CalloutType, string> = {
+  note: "i",
+  tip: "+",
+  warning: "!",
+};
+---
+
+<aside class={`mdxcn-callout mdxcn-callout-${type}`} role="note">
+  <span class="mdxcn-callout-glyph" aria-hidden="true">{glyphs[type]}</span>
+  <div>
+    <p class="mdxcn-callout-title">{title}</p>
+    <div class="mdxcn-callout-body"><slot /></div>
+  </div>
+</aside>

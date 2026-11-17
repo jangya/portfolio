@@ -6,7 +6,7 @@ const writingTracks = [
   "Front-end Craft",
   "Building in Public",
 ];
-const insightModules = import.meta.glob("../content/insights/*.md", {
+const insightModules = import.meta.glob("../content/insights/*.{md,mdx}", {
   eager: true,
 });
 type InsightFrontmatter = {
@@ -21,7 +21,10 @@ const insights = Object.entries(insightModules)
     const insightEntry = entry as { frontmatter: InsightFrontmatter };
 
     return {
-      slug: path.split("/").pop()?.replace(".md", ""),
+      slug: path
+        .split("/")
+        .pop()
+        ?.replace(/\.(md|mdx)$/, ""),
       ...insightEntry.frontmatter,
     };
   })

@@ -1,0 +1,49 @@
+---
+const { labels } = Astro.props as { labels: string[] };
+const tabId = `mdxcn-tabs-${Math.random().toString(36).slice(2)}`;
+---
+
+<div class="mdxcn-tabs" id={tabId}>
+  <div class="mdxcn-tab-list" role="tablist" aria-label="Content variations">
+    {
+      labels.map((label, index) => (
+        <button
+          class="mdxcn-tab"
+          type="button"
+          role="tab"
+          aria-selected={index === 0}
+          aria-controls={`${tabId}-panel-${index}`}
+          data-tab-index={index}
+        >
+          {label}
+        </button>
+      ))
+    }
+  </div>
+  <div class="mdxcn-tab-panels"><slot /></div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>(".mdxcn-tabs").forEach((tabs) => {
+    const buttons = tabs.querySelectorAll<HTMLButtonElement>(".mdxcn-tab");
+    const panels = tabs.querySelectorAll<HTMLElement>("[data-tab-panel]");
+
+    const activate = (index: number) => {
+      buttons.forEach((button, buttonIndex) => {
+        const selected = buttonIndex === index;
+        button.setAttribute("aria-selected", String(selected));
+      });
+      panels.forEach((panel, panelIndex) => {
+        panel.hidden = panelIndex !== index;
+      });
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () =>
+        activate(Number(button.dataset.tabIndex)),
+      );
+    });
+
+    activate(0);
+  });
+</script>
