@@ -43,15 +43,22 @@ const educationStop = profile.education.find((education) =>
 );
 ---
 
-<Base title="Home" activePage="home">
+<Base title="Profile" activePage="home">
   <!-- Intro -->
   <div class="intro">
     <div class="intro-copy">
-      <h1 class="intro-name">{profile.name}</h1>
+      <h1 class="intro-heading">Hello! I’m Jangya.</h1>
       <div class="intro-bio">
         <Intro />
       </div>
     </div>
+    <figure class="intro-portrait">
+      <img src="/profile.png" alt="Portrait of Jangya" />
+      <figcaption>
+        <span>Staff Software Engineer</span>
+        <span>Bengaluru, India</span>
+      </figcaption>
+    </figure>
   </div>
 
   <section class="home-projects" aria-labelledby="home-projects-title">

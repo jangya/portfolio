@@ -7,7 +7,6 @@ const { title } = Astro.props;
 const googleAnalyticsId = "G-3CG3K6B06G";
 const pageDepth = Astro.url.pathname.split("/").filter(Boolean).length;
 const rootPath = pageDepth === 0 ? "./" : "../".repeat(pageDepth);
-const homePath = rootPath;
 ---
 
 <html lang="en">
@@ -101,20 +100,8 @@ const homePath = rootPath;
   </head>
   <body>
     <div class="page-shell">
-      <nav>
-        <div class="site-identity">
-          <a
-            href={homePath}
-            class="site-avatar-link"
-            aria-label={`${profile.name} home`}
-          >
-            <img class="site-avatar" src={`${rootPath}profile.png`} alt="" />
-          </a>
-          <div class="site-text">
-            <a href={homePath} class="site-name">{profile.name}</a>
-            <p class="site-status">{profile.status}</p>
-          </div>
-        </div>
+      <nav class="site-nav">
+        <a href="/" class="site-mark" aria-label="Home"> ଯଜ୍ଞ (यज्ञ) </a>
         <div class="nav-links">
           <a
             href={profile.github}
