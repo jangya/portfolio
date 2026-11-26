@@ -1,0 +1,239 @@
+---
+title: "The Stack Changed. The Craft Didn’t."
+author: "Jangya Narayana Satapathy"
+date: "2026-07-26"
+category: "Open Engineering"
+location: "Bengaluru, India"
+tags:
+  - frontend
+  - architecture
+  - ai-ml
+  - career
+---
+
+export const PullQuote = ({ children }) => (
+  <blockquote
+    style={{
+      margin: "2rem 0",
+      padding: "0.75rem 0 0.75rem 1.25rem",
+      borderLeft: "2px solid #B85042",
+      fontStyle: "italic",
+      fontSize: "1.15rem",
+      lineHeight: 1.6,
+      color: "#1A1A1A",
+      backgroundColor: "#F3EFE8",
+      paddingRight: "1.25rem",
+      borderRadius: "2px",
+    }}
+  >
+    {children}
+  </blockquote>
+);
+
+export const MarginNote = ({ children }) => (
+  <p
+    style={{
+      margin: "0 0 0.35rem 0",
+      fontFamily: "'Caveat', Georgia, serif",
+      fontSize: "1.25rem",
+      fontStyle: "italic",
+      color: "#B85042",
+      lineHeight: 1.2,
+    }}
+  >
+    {children}
+  </p>
+);
+
+export const TimelineStop = ({ era, org, note, children }) => (
+  <section
+    style={{
+      position: "relative",
+      paddingLeft: "1.25rem",
+      paddingBottom: "1.75rem",
+      borderLeft: "1px solid #D6CEC2",
+    }}
+  >
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        flexWrap: "wrap",
+        gap: "0.5rem",
+        fontSize: "0.8rem",
+        color: "#666666",
+        letterSpacing: "0.02em",
+        marginBottom: "0.25rem",
+      }}
+    >
+      <span>{era}</span>
+      <strong style={{ color: "#B85042", fontWeight: 600 }}>{org}</strong>
+    </div>
+    {note && <MarginNote>{note}</MarginNote>}
+    <div style={{ margin: 0 }}>{children}</div>
+  </section>
+);
+
+<div
+  style={{
+    fontSize: "1.05rem",
+    color: "#666666",
+    fontStyle: "italic",
+    marginBottom: "2rem",
+  }}
+>
+  <span>
+    A personal story about curiosity, abstraction, frontend foundations, AI/ML,
+    and why the interface remains the most durable part of software.
+  </span>
+</div>
+
+Hello—I’m **Jangya** (full name: Jangya Narayana Satapathy).
+
+It started unconsciously. I was fourteen when I got my first digital phone. There was a Snake game on it, and I couldn’t stop wondering how that single pixel moved across a tiny screen, who wrote the rules, and whether I could write them too.
+
+That itch never left. In college, while my classmates attended lectures, I spent nights teaching myself HTML and JavaScript, building terrible websites I was inexplicably proud of. Those sleepless nights—fueled by curiosity and instant noodles—became the foundation of everything I do today.
+
+## The Real Story Was Abstraction
+
+My first serious professional chapter was at **Adept Concept Private Limited**, a startup where I worked with jQuery, PHP, HTML, CSS, and JavaScript. It wasn’t glamorous, but it was foundational. I was close to the browser, close to the DOM, close to the request-response cycle, and close to every mistake I made.
+
+<PullQuote>
+  Abstractions are useful only when you understand what they are hiding.
+</PullQuote>
+
+Looking back, the past decade wasn’t really a story about moving from jQuery to Angular to React. It was a story about abstraction:
+
+<dl
+  style={{
+    display: "grid",
+    gap: "0.75rem",
+    margin: "1.5rem 0",
+    padding: "1.25rem",
+    backgroundColor: "#F3EFE8",
+    border: "1px solid #E6E0D6",
+    borderRadius: "2px",
+  }}
+>
+  <div>
+    <dt style={{ fontWeight: 600, color: "#1A1A1A", display: "inline" }}>
+      jQuery —{" "}
+    </dt>
+    <dd style={{ display: "inline", margin: 0, color: "#2E2C29" }}>
+      abstracted browser inconsistencies and DOM manipulation.
+    </dd>
+  </div>
+  <div>
+    <dt style={{ fontWeight: 600, color: "#1A1A1A", display: "inline" }}>
+      Angular —{" "}
+    </dt>
+    <dd style={{ display: "inline", margin: 0, color: "#2E2C29" }}>
+      abstracted application structure.
+    </dd>
+  </div>
+  <div>
+    <dt style={{ fontWeight: 600, color: "#1A1A1A", display: "inline" }}>
+      SAP UI5 —{" "}
+    </dt>
+    <dd style={{ display: "inline", margin: 0, color: "#2E2C29" }}>
+      abstracted enterprise UI patterns.
+    </dd>
+  </div>
+  <div>
+    <dt style={{ fontWeight: 600, color: "#1A1A1A", display: "inline" }}>
+      React —{" "}
+    </dt>
+    <dd style={{ display: "inline", margin: 0, color: "#2E2C29" }}>
+      abstracted rendering into components and state.
+    </dd>
+  </div>
+</dl>
+
+Every new frontend library is an argument about which complexity should be hidden, which should be exposed, and who carries the burden: the framework, the developer, or the user.
+
+## When the Edge Became the System
+
+As the web matured, my work moved into larger systems where frontend stopped sitting at the edge and became part of the core architecture.
+
+<div style={{ margin: "1.75rem 0" }}>
+  <TimelineStop
+    era="Enterprise Craft"
+    org="Cognizant (for Apple)"
+    note="accessibility, design discipline & trust"
+  >
+    Working as a consultant for Apple reshaped my sense of what good UI means. I saw up close how accessibility, design discipline, and performance—three things that often sound like checkboxes—directly determine user trust. I also worked inside enterprise monoliths and Angular-era architectures, where the real challenge is keeping screens consistent across massive systems.
+  </TimelineStop>
+
+<TimelineStop
+  era="Cloud & Enterprise UI"
+  org="SAP Labs"
+  note="data density & cloud delivery"
+>
+  I went deeper into SAP UI5, Angular, and MEAN-stack workflows across Node.js
+  and MongoDB, alongside hands-on Docker, Kubernetes, and cloud delivery. That
+  is where frontend stopped feeling like a layer at the edge and started feeling
+  like part of the system itself.
+</TimelineStop>
+
+  <TimelineStop
+    era="Distributed Scale"
+    org="Oracle Cloud"
+    note="where frontend meets platform services"
+  >
+    Building enterprise-grade UI systems for Oracle Cloud sharpened my understanding of distributed architecture and the seams where frontend meets platform services.
+  </TimelineStop>
+</div>
+
+<PullQuote>
+  The moment we moved complex business logic to the browser, frontend stopped
+  being a “layer” and became the application itself.
+</PullQuote>
+
+Understanding how a UI talks to services, how containers isolate build artifacts, and how the cloud amplifies both reach and failure surfaces isn’t purely a backend concern anymore. It’s a frontend concern too.
+
+## The Last Pillar
+
+Today, as a Staff Software Engineer at **Edelman Financial Engines**, I lead frontend architecture and GenAI integration at scale. The stack has evolved to React, Zustand, and AI-powered advisory platforms, but the central question hasn’t changed:
+
+<PullQuote>
+  How do you build a UI that is fast, accessible, and honest about what it is
+  doing?
+</PullQuote>
+
+I believe UI is the last pillar holding any application upright. Backend services can be swapped. Databases can be migrated. AI models will be iterated on monthly. But the interface between human intention and digital capability is permanent.
+
+No amount of AI code generation removes the need to decide what a user sees first, how errors are communicated, when to delegate to a model, and when to keep a human in the loop. Those are architectural decisions—they require judgment, taste, and the lived experience of knowing what breaks in production.
+
+That conviction led me to pursue an **M.Tech in AI/ML at BITS Pilani**—not to chase hype, but to understand these systems from the inside out and write about where AI and frontend architecture actually intersect.
+
+AI can generate code, but it cannot rescue a weak mental model. If you don’t understand how the browser works, how state flows, why accessibility fails, or where performance breaks, you can’t debug what AI hands you.
+
+<PullQuote>If you cannot build it, you cannot truly debug it.</PullQuote>
+
+The most interesting work in our field isn’t about what AI can generate. It’s about what it cannot replace.
+
+## Away from the Screen
+
+I live in Bengaluru with my wife and son. When I’m not architecting frontend systems or studying neural networks, you’ll find me at the gym, meditating, or chasing the next adventure—anything that reminds me that the physical world is still the most compelling interface there is.
+
+<footer
+  style={{
+    marginTop: "2.5rem",
+    paddingTop: "1.25rem",
+    borderTop: "1px dashed #D6CEC2",
+  }}
+>
+  <p
+    style={{
+      margin: 0,
+      fontFamily: "'Caveat', Georgia, serif",
+      fontSize: "1.75rem",
+      color: "#1A1A1A",
+    }}
+  >
+    — Jangya
+  </p>
+  <p style={{ margin: "0.2rem 0 0", fontSize: "0.8rem", color: "#666666" }}>
+    Bengaluru, India
+  </p>
+</footer>

@@ -30,10 +30,10 @@
       "role": "Staff Software Engineer",
       "period": "Mar 2026 – Present",
       "location": "Bengaluru",
-      "highlight": "Leading frontend architecture and GenAI integration at scale",
+      "highlight": "Frontend architecture and GenAI workflows at scale",
       "bullets": [
-        "Architecting advisory platform experiences across React, Zustand, and modern frontend patterns.",
-        "Shaping GenAI workflows where strong UI foundations, debugging discipline, and human-in-the-loop design matter."
+        "Lead frontend architecture across financial advisory platforms using React and Zustand.",
+        "Design human-in-the-loop GenAI workflows grounded in predictable state and UI reliability."
       ]
     },
     {
@@ -41,10 +41,10 @@
       "role": "Senior Software Engineer",
       "period": "Oct 2021 – Mar 2026",
       "location": "Bengaluru",
-      "highlight": "4.5 years shaping product frontend for a financial advisory platform",
+      "highlight": "Core product UI for client-facing financial advisory tools",
       "bullets": [
-        "Built and evolved client-facing financial advisory interfaces with a focus on reliability and clarity.",
-        "Worked across complex product flows where state, data fetching, and user trust had to stay aligned."
+        "Built and scaled high-trust financial workflows with strict focus on clarity and resilience.",
+        "Aligned complex client state, data fetching, and error handling across multi-step advisory journeys."
       ]
     },
     {
@@ -52,10 +52,10 @@
       "role": "Senior Member of Technical Staff",
       "period": "Jun 2021 – Oct 2021",
       "location": "Bengaluru",
-      "highlight": "Enterprise-grade frontend systems at Oracle Cloud",
+      "highlight": "Enterprise UI systems for Oracle Cloud",
       "bullets": [
-        "Worked on enterprise UI systems for Oracle Cloud using framework-driven frontend architecture.",
-        "Deepened understanding of distributed systems and the boundaries where frontend meets platform services."
+        "Developed framework-driven cloud console interfaces built for large distributed surfaces.",
+        "Engineered clean integration boundaries between frontend modules and backend platform services."
       ]
     },
     {
@@ -63,10 +63,10 @@
       "role": "Senior Developer",
       "period": "Apr 2021 – Jun 2021",
       "location": "Bengaluru",
-      "highlight": "Senior developer track at SAP's Bengaluru engineering hub",
+      "highlight": "Cloud-native enterprise UI and delivery workflows",
       "bullets": [
-        "Built enterprise product UI with SAP UI5 and Angular-oriented application patterns.",
-        "Worked around cloud delivery concerns including Node.js services, MongoDB, Docker, and Kubernetes."
+        "Shipped enterprise product interfaces using SAP UI5 and Angular application patterns.",
+        "Bridged frontend builds with Node.js, MongoDB, Docker, and Kubernetes delivery pipelines."
       ]
     },
     {
@@ -74,10 +74,10 @@
       "role": "Developer",
       "period": "Jul 2018 – Apr 2021",
       "location": "Bengaluru",
-      "highlight": "2+ years building SAP product frontend systems",
+      "highlight": "Enterprise product frontends and reusable UI patterns",
       "bullets": [
-        "Built product frontend systems with SAP UI5, Angular, and MEAN-stack concepts.",
-        "Learned how enterprise frameworks abstract recurring product, accessibility, and integration problems."
+        "Built data-intensive enterprise interfaces across SAP UI5, Angular, and the MEAN stack.",
+        "Standardized accessibility, theming, and integration patterns across shared product surfaces."
       ]
     },
     {
@@ -85,21 +85,21 @@
       "role": "Programmer Analyst",
       "period": "Jun 2016 – Jul 2018",
       "location": "Bengaluru",
-      "highlight": "Consulted for Apple and built a stronger foundation in UI quality",
+      "highlight": "UI engineering consultant for Apple",
       "bullets": [
-        "Worked as a consultant for Apple, gaining exposure to accessibility, design discipline, and performance expectations.",
-        "Explored enterprise monoliths and Angular-era application structure while learning how production UI decisions scale."
+        "Delivered production interfaces meeting Apple’s standards for accessibility, polish, and performance.",
+        "Maintained and scaled Angular-era web applications inside large enterprise monoliths."
       ]
     },
     {
       "company": "Adept Concept Private Limited",
       "role": "Software Developer",
       "period": "2014 – 2016",
-      "location": "Bhubaneswar",
-      "highlight": "Early startup experience building web applications from raw fundamentals",
+      "location": "Hyderabad",
+      "highlight": "Full-stack web fundamentals from the DOM up",
       "bullets": [
-        "Built web applications with jQuery, PHP, HTML, CSS, and JavaScript.",
-        "Learned browser behavior, DOM manipulation, and server-rendered workflows before modern frontend abstractions hid the details."
+        "Built end-to-end web applications with vanilla JavaScript, jQuery, PHP, HTML, and CSS.",
+        "Owned browser behavior, DOM performance, and server-rendered request cycles directly."
       ]
     }
   ],
@@ -107,7 +107,7 @@
     {
       "degree": "M.Tech, AI/ML",
       "institution": "BITS Pilani",
-      "period": "2024 – Present",
+      "period": "2025 – Present",
       "note": "WILP — Work Integrated Learning Program"
     },
     {
@@ -128,13 +128,13 @@
       "url": "https://github.com/jangya/learning-artifacts"
     },
     {
-      "id": "portfolio",
-      "title": "jangya.github.io",
-      "subtitle": "Personal Portfolio",
-      "description": "Luxury Expressive Minimalist portfolio built with Astro 7.x, Plain HTML and JavaScript.",
-      "tags": ["Astro", "HTML", "JavaScript"],
+      "id": "Koshara",
+      "title": "Koshara",
+      "subtitle": "Expense Tracker",
+      "description": "A household-first monthly finance planner built with Next.js 15, React 19, TypeScript, Tailwind v4, TanStack Query, Zustand, React Hook Form/Zod and Supabase.",
+      "tags": ["React", "Next.js", "Supabase", "TypeScript", "Tailwind", "Zod"],
       "status": "Active",
-      "url": "https://github.com/jangya/jangya.github.io"
+      "url": "https://github.com/jangya/koshara"
     },
     {
       "id": "astro-portfolio-forge",

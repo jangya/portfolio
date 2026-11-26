@@ -1,7 +1,7 @@
 Hello! I’m Jangya.
 
-I build front-end systems that are fast, accessible, and honest about what they are doing. Over the last decade, my focus has been front-end architecture—the intersection of system design, performance, and human trust.
+I build frontend systems at Edelman Financial Engines in Bengaluru, where I’m currently a Staff Software Engineer working on React architecture and GenAI workflows for financial advisory tools.
 
-Right now, I’m pursuing an M.Tech in AI/ML to explore where AI and interface architecture genuinely intersect, beyond the hype. My rule is simple: if you cannot build it, you cannot truly debug it.
+Over the past decade, I’ve focused on building reliable web applications at scale. Right now, I’m balancing my day job with an M.Tech in AI/ML at BITS Pilani—mostly building small agentic AI tools to see what actually makes AI useful in everyday study and engineering work.
 
-<a class="text-link" href="./insights/from-jquery-to-genai-what-front-end-taught-me/">Read the full story →</a>
+<a class="text-link" href="./insights/the-stack-changed-the-craft-didnt/">Read the full story →</a>

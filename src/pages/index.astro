@@ -2,6 +2,45 @@
 import Base from "../layouts/Base.astro";
 import profile from "../content/personal-info/profile.json";
 import Intro from "../content/home/intro.md";
+
+const experienceGroups = [...profile.experience]
+  .reverse()
+  .reduce<{ company: string; entries: typeof profile.experience }[]>(
+    (groups, experience) => {
+      const lastGroup = groups[groups.length - 1];
+
+      if (lastGroup?.company === experience.company) {
+        lastGroup.entries.push(experience);
+      } else {
+        groups.push({ company: experience.company, entries: [experience] });
+      }
+
+      return groups;
+    },
+    [],
+  );
+
+const periodRange = (entries: typeof profile.experience) => {
+  const start = entries[0].period.split("–")[0].trim();
+  const end = entries[entries.length - 1].period.split("–").at(-1)?.trim();
+
+  return `${start} – ${end}`;
+};
+
+const timelineStops = experienceGroups.map((group) => ({
+  ...group,
+  title:
+    group.company === "Adept Concept Private Limited"
+      ? "Early startups"
+      : group.company,
+  period: periodRange(group.entries),
+  isCurrent: group.entries.some((experience) =>
+    experience.period.includes("Present"),
+  ),
+}));
+const educationStop = profile.education.find((education) =>
+  education.degree.startsWith("M.Tech"),
+);
 ---
 
 <Base title="Home" activePage="home">
@@ -15,44 +54,185 @@ import Intro from "../content/home/intro.md";
     </div>
   </div>
 
-  <!-- Experience -->
-  <h2>Experience</h2>
-
-  {
-    profile.experience.map((exp) => (
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-role">{exp.role}</span>
-          <span class="entry-period">{exp.period}</span>
-        </div>
-        <div class="entry-company">
-          {exp.company} &nbsp;·&nbsp; {exp.location}
-        </div>
-        <div class="entry-highlight">{exp.highlight}</div>
-        {exp.bullets && (
-          <ul class="entry-bullets">
-            {exp.bullets.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
-        )}
+  <section class="home-projects" aria-labelledby="home-projects-title">
+    <div class="section-heading">
+      <h2 id="home-projects-title">SELECTED WORK</h2>
+      <div class="section-heading-aside">
+        <a
+          href="https://github.com/jangya?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View all GitHub repositories"
+        >
+          All projects ↗
+        </a>
       </div>
-    ))
-  }
+    </div>
+    <ol class="home-project-list">
+      {
+        profile.projects.map((project, index) => (
+          <li class="home-project">
+            <article
+              class={`home-project-card ${index % 2 === 1 ? "home-project-preview-first" : ""}`}
+            >
+              <div class="home-project-copy">
+                <h3 class="home-project-title">
+                  {project.url ? (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.title}
+                      <span aria-hidden="true"> ↗</span>
+                    </a>
+                  ) : (
+                    project.title
+                  )}
+                </h3>
+                <p class="home-project-tags">{project.tags.join(" · ")}</p>
+                <p class="home-project-description">{project.description}</p>
+              </div>
 
-  <!-- Education -->
-  <h2>Education</h2>
+              <figure
+                class={`home-project-preview home-project-preview-${index % 3}`}
+                aria-hidden="true"
+              >
+                <span class="home-project-status-badge">{project.status}</span>
+                <div class="home-project-window">
+                  <div class="home-project-browser-bar">
+                    <span class="home-project-browser-dots">
+                      <i />
+                      <i />
+                      <i />
+                    </span>
+                    <span class="home-project-browser-address">
+                      {project.url?.replace(/^https?:\/\//, "") ??
+                        project.title}
+                    </span>
+                  </div>
+                  <div class="home-project-preview-screen">
+                    <div class="home-project-preview-main">
+                      <span class="home-project-preview-accent" />
+                      <span class="home-project-preview-line home-project-preview-line-long" />
+                      <span class="home-project-preview-line" />
+                      <span class="home-project-preview-line home-project-preview-line-short" />
+                      <div class="home-project-preview-chart">
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                      </div>
+                      <div class="home-project-preview-code">
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                      </div>
+                    </div>
+                    <div class="home-project-preview-sidebar">
+                      <i />
+                      <i />
+                      <i />
+                      <i />
+                      <i />
+                    </div>
+                  </div>
+                </div>
+              </figure>
+            </article>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
 
-  {
-    profile.education.map((edu) => (
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-role">{edu.degree}</span>
-          <span class="entry-period">{edu.period}</span>
-        </div>
-        <div class="entry-company">{edu.institution}</div>
-        {edu.note && <div class="entry-highlight">{edu.note}</div>}
-      </div>
-    ))
-  }
+  <section class="route-map-section" aria-labelledby="career-route-title">
+    <div class="section-heading">
+      <h2 id="career-route-title">THE ROAD SO FAR</h2>
+    </div>
+
+    <ol class="route-map">
+      {
+        timelineStops.map((stop, index) => (
+          <li
+            class={`route-stop ${stop.isCurrent ? "route-stop-current-work" : ""}`}
+          >
+            <span class="route-stop-marker" aria-hidden="true" />
+            <details>
+              <summary>
+                <span class="route-stop-heading">
+                  <span class="route-stop-name">{stop.title}</span>
+                  <span class="route-stop-meta">
+                    stop {index + 1} · {stop.period}
+                  </span>
+                </span>
+                <span class="route-stop-toggle" aria-hidden="true">
+                  +
+                </span>
+              </summary>
+              <div class="route-stop-details">
+                {stop.entries.map((experience) => (
+                  <div class="entry route-entry">
+                    <div class="entry-header">
+                      <span class="entry-role">{experience.role}</span>
+                      <span class="entry-period">{experience.period}</span>
+                    </div>
+                    <div class="entry-company">
+                      {experience.company} &nbsp;·&nbsp; {experience.location}
+                    </div>
+                    <div class="entry-highlight">{experience.highlight}</div>
+                    {experience.bullets && (
+                      <ul class="entry-bullets">
+                        {experience.bullets.map((item) => (
+                          <li>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </details>
+          </li>
+        ))
+      }
+      {
+        educationStop && (
+          <li class="route-stop route-stop-current-study">
+            <span class="route-stop-marker" aria-hidden="true" />
+            <details>
+              <summary>
+                <span class="route-stop-heading">
+                  <span class="route-stop-name">
+                    {educationStop.institution}, {educationStop.degree}
+                  </span>
+                  <span class="route-stop-meta">
+                    stop {timelineStops.length + 1} · {educationStop.period} ·
+                    you are here
+                  </span>
+                </span>
+                <span class="route-stop-toggle" aria-hidden="true">
+                  +
+                </span>
+              </summary>
+              <div class="route-stop-details">
+                <div class="entry route-entry">
+                  <div class="entry-header">
+                    <span class="entry-role">{educationStop.degree}</span>
+                    <span class="entry-period">{educationStop.period}</span>
+                  </div>
+                  <div class="entry-company">{educationStop.institution}</div>
+                  {educationStop.note && (
+                    <div class="entry-highlight">{educationStop.note}</div>
+                  )}
+                </div>
+              </div>
+            </details>
+          </li>
+        )
+      }
+    </ol>
+  </section>
 </Base>
