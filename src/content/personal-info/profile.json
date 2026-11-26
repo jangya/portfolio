@@ -119,13 +119,12 @@
   ],
   "projects": [
     {
-      "id": "learning-artifacts",
-      "title": "Learning Artifacts",
-      "subtitle": "Interactive Learning Repository",
-      "description": "A growing collection of small UI-based learning artifacts that turn technical concepts, experiments, and study notes into explorable single-page interfaces.",
-      "tags": ["HTML", "Learning Tools", "Interactive Demos", "GitHub Pages"],
-      "status": "Active",
-      "url": "https://github.com/jangya/learning-artifacts"
+      "id": "enterprise-mcp-server",
+      "title": "Enterprise MCP Server",
+      "subtitle": "Internal MCP Orchestrator",
+      "description": "An internal Model Context Protocol (MCP) orchestrator that connects AI workflows across engineering tools—including Jira, Confluence, Splunk, GitLab, and GitHub—so engineers can query tickets, docs, logs, and repos from a single interface.",
+      "tags": ["MCP", "AI Tooling", "Orchestration", "Enterprise"],
+      "status": "INTERNAL"
     },
     {
       "id": "Koshara",
@@ -137,13 +136,13 @@
       "url": "https://github.com/jangya/koshara"
     },
     {
-      "id": "astro-portfolio-forge",
-      "title": "astro-portfolio-forge",
-      "subtitle": "Astro Portfolio Template",
-      "description": "A lightweight Astro portfolio forge for shaping fast, content-driven personal sites with a minimal static-first setup.",
-      "tags": ["Astro", "Portfolio", "Static Site"],
+      "id": "learning-artifacts",
+      "title": "Learning Artifacts",
+      "subtitle": "Interactive Learning Repository",
+      "description": "A growing collection of small UI-based learning artifacts that turn technical concepts, experiments, and study notes into explorable single-page interfaces.",
+      "tags": ["HTML", "Learning Tools", "Interactive Demos", "GitHub Pages"],
       "status": "Active",
-      "url": "https://github.com/jangya/astro-portfolio-forge"
+      "url": "https://github.com/jangya/learning-artifacts"
     }
   ],
   "insights": [

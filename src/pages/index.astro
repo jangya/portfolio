@@ -47,7 +47,7 @@ const educationStop = profile.education.find((education) =>
   <!-- Intro -->
   <div class="intro">
     <div class="intro-copy">
-      <h1 class="intro-heading">Hello! I’m Jangya.</h1>
+      <h1 class="intro-heading">Hello! I'm {profile.name}.</h1>
       <div class="intro-bio">
         <Intro />
       </div>
@@ -102,36 +102,84 @@ const educationStop = profile.education.find((education) =>
               </div>
 
               <figure
-                class={`home-project-preview home-project-preview-${index % 3}`}
-                aria-hidden="true"
+                class={`home-project-preview home-project-preview-${index % 3} ${project.id === "enterprise-mcp-server" ? "home-project-preview-architecture" : ""}`}
+                aria-hidden={
+                  project.id === "enterprise-mcp-server" ? undefined : "true"
+                }
               >
                 <span class="home-project-status-badge">{project.status}</span>
-                <div class="home-project-window">
-                  <div class="home-project-browser-bar">
-                    <span class="home-project-browser-dots">
-                      <i />
-                      <i />
-                      <i />
+                {project.id === "enterprise-mcp-server" ? (
+                  <div
+                    class="home-project-architecture"
+                    role="img"
+                    aria-label="MCP Orchestrator connecting Jira, Confluence, Splunk, GitLab, and GitHub"
+                  >
+                    <svg
+                      viewBox="0 0 600 400"
+                      preserveAspectRatio="none"
+                      aria-hidden="true"
+                    >
+                      <line x1="102" y1="96" x2="300" y2="200" />
+                      <line x1="300" y1="56" x2="300" y2="200" />
+                      <line x1="498" y1="96" x2="300" y2="200" />
+                      <line x1="132" y1="320" x2="300" y2="200" />
+                      <line x1="468" y1="320" x2="300" y2="200" />
+                    </svg>
+                    <span class="home-project-service home-project-service-jira">
+                      Jira
                     </span>
-                    <span class="home-project-browser-address">
-                      {project.url?.replace(/^https?:\/\//, "") ??
-                        project.title}
+                    <span class="home-project-service home-project-service-confluence">
+                      Confluence
                     </span>
+                    <span class="home-project-service home-project-service-splunk">
+                      Splunk
+                    </span>
+                    <span class="home-project-service home-project-service-gitlab">
+                      GitLab
+                    </span>
+                    <span class="home-project-service home-project-service-github">
+                      GitHub
+                    </span>
+                    <div class="home-project-orchestrator">
+                      <span>MCP</span>
+                      <strong>Orchestrator</strong>
+                    </div>
                   </div>
-                  <div class="home-project-preview-screen">
-                    <div class="home-project-preview-main">
-                      <span class="home-project-preview-accent" />
-                      <span class="home-project-preview-line home-project-preview-line-long" />
-                      <span class="home-project-preview-line" />
-                      <span class="home-project-preview-line home-project-preview-line-short" />
-                      <div class="home-project-preview-chart">
+                ) : (
+                  <div class="home-project-window">
+                    <div class="home-project-browser-bar">
+                      <span class="home-project-browser-dots">
                         <i />
                         <i />
                         <i />
-                        <i />
-                        <i />
+                      </span>
+                      <span class="home-project-browser-address">
+                        {project.url?.replace(/^https?:\/\//, "") ??
+                          project.title}
+                      </span>
+                    </div>
+                    <div class="home-project-preview-screen">
+                      <div class="home-project-preview-main">
+                        <span class="home-project-preview-accent" />
+                        <span class="home-project-preview-line home-project-preview-line-long" />
+                        <span class="home-project-preview-line" />
+                        <span class="home-project-preview-line home-project-preview-line-short" />
+                        <div class="home-project-preview-chart">
+                          <i />
+                          <i />
+                          <i />
+                          <i />
+                          <i />
+                        </div>
+                        <div class="home-project-preview-code">
+                          <i />
+                          <i />
+                          <i />
+                          <i />
+                          <i />
+                        </div>
                       </div>
-                      <div class="home-project-preview-code">
+                      <div class="home-project-preview-sidebar">
                         <i />
                         <i />
                         <i />
@@ -139,15 +187,8 @@ const educationStop = profile.education.find((education) =>
                         <i />
                       </div>
                     </div>
-                    <div class="home-project-preview-sidebar">
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                      <i />
-                    </div>
                   </div>
-                </div>
+                )}
               </figure>
             </article>
           </li>

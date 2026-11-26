@@ -569,6 +569,109 @@ footer {
   transform: rotate(-0.5deg);
 }
 
+.home-project-preview-architecture {
+  transform: none;
+}
+
+.home-project-preview-architecture .home-project-status-badge {
+  border-color: #b85042;
+  background: #faf9f6;
+  color: #b85042;
+}
+
+.home-project-architecture {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.5;
+  border: 1px solid #e6e0d6;
+  border-radius: 6px;
+  background: #faf9f6;
+}
+
+.home-project-architecture svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-project-architecture line {
+  stroke: #b85042;
+  stroke-linecap: round;
+  stroke-opacity: 0.45;
+  stroke-width: 1.5px;
+}
+
+.home-project-service,
+.home-project-orchestrator {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e6e0d6;
+  border-radius: 4px;
+  background: #faf9f6;
+  color: #666;
+  font-family: var(--font-sans);
+}
+
+.home-project-service {
+  width: 28%;
+  min-height: 1.75rem;
+  font-size: 0.68rem;
+  transform: translate(-50%, -50%);
+}
+
+.home-project-service-jira {
+  top: 24%;
+  left: 17%;
+}
+
+.home-project-service-confluence {
+  top: 14%;
+  left: 50%;
+}
+
+.home-project-service-splunk {
+  top: 24%;
+  left: 83%;
+}
+
+.home-project-service-gitlab {
+  top: 80%;
+  left: 22%;
+}
+
+.home-project-service-github {
+  top: 80%;
+  left: 78%;
+}
+
+.home-project-orchestrator {
+  top: 50%;
+  left: 50%;
+  width: 38%;
+  min-height: 3rem;
+  flex-direction: column;
+  gap: 0.15rem;
+  border-color: #b85042;
+  color: #1a1a1a;
+  transform: translate(-50%, -50%);
+}
+
+.home-project-orchestrator span {
+  color: #b85042;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-project-orchestrator strong {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
 .home-project-status-badge {
   position: absolute;
   top: -0.45rem;
