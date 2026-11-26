@@ -885,6 +885,12 @@ footer {
   max-width: 680px;
 }
 
+.article h2 {
+  font-size: var(--list-title-size);
+  line-height: var(--title-line-height);
+  margin: 2.5rem 0 1rem;
+}
+
 .article h1 {
   font-size: var(--heading-size);
   line-height: var(--title-line-height);
